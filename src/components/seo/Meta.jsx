@@ -10,7 +10,9 @@ const Meta = ({
 }) => {
   const fullTitle = title ? `${title} – ${SITE_NAME}` : SITE_NAME;
   const canonicalUrl = `${SITE_URL}${path}`;
-  const imageUrl = ogImage ? `${SITE_URL}${ogImage}` : `${SITE_URL}/images/og/home.jpg`;
+  const imageUrl = ogImage
+    ? `${SITE_URL}${ogImage}`
+    : `${SITE_URL}/images/og/home.jpg`;
 
   return (
     <Helmet>

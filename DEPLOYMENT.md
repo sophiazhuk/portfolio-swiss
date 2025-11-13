@@ -12,10 +12,10 @@ Your FTP credentials need to be stored as GitHub repository secrets:
 2. Click **Settings** → **Secrets and variables** → **Actions**
 3. Click **New repository secret** and add these three secrets:
 
-| Secret Name | Value |
-|------------|-------|
-| `FTP_SERVER` | `198.54.114.249` |
-| `FTP_USERNAME` | `sophdmks` |
+| Secret Name    | Value                    |
+| -------------- | ------------------------ |
+| `FTP_SERVER`   | `198.54.114.249`         |
+| `FTP_USERNAME` | `sophdmks`               |
 | `FTP_PASSWORD` | Your cPanel/FTP password |
 
 **Important:** Never commit your FTP password to the repository. GitHub Secrets are encrypted and secure.
@@ -23,6 +23,7 @@ Your FTP credentials need to be stored as GitHub repository secrets:
 ### 2. Verify Target Directory
 
 The workflow deploys to `/public_html/` on your server. If your site is in a different directory:
+
 1. Edit `.github/workflows/deploy.yml`
 2. Update the `server-dir` value under "Deploy to Namecheap via FTP"
 
@@ -59,6 +60,7 @@ You can also trigger deployment manually:
 ## What Gets Deployed
 
 Only the contents of the `dist/` folder are deployed, which includes:
+
 - `index.html`
 - JavaScript bundles
 - CSS files
@@ -73,20 +75,24 @@ The `.htaccess` file in `public/` ensures all routes redirect to `index.html`, a
 ## Troubleshooting
 
 ### Deployment fails with "Authentication failed"
+
 - Verify `FTP_USERNAME` and `FTP_PASSWORD` secrets are correct
 - Try logging into cPanel with the same credentials
 
 ### Deployment succeeds but site doesn't update
+
 - Check that `server-dir` is set to the correct directory
 - Verify files were uploaded to `/public_html/` in cPanel File Manager
 - Clear your browser cache
 
 ### ESLint or tests fail
+
 - Run `npm run lint` locally to fix linting errors
 - Run `npm test` locally to fix failing tests
 - Fix issues before pushing to `main`
 
 ### Build fails
+
 - Run `npm run build` locally to reproduce the error
 - Check for any console errors or missing dependencies
 
@@ -110,6 +116,7 @@ npm run preview
 To modify the deployment process, edit `.github/workflows/deploy.yml`.
 
 Common changes:
+
 - **Different branch**: Change `branches: [main]` to your preferred branch
 - **Skip tests**: Comment out the "Run tests" step
 - **Different Node version**: Update `node-version` in "Setup Node.js"

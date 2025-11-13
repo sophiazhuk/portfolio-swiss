@@ -26,7 +26,12 @@ const AboutSection = () => (
     </div>
     <div className={styles.colTwo}>
       <div className={styles.portrait}>
-  <img src="/images/image 2.png" alt="Portrait of Sophia" decoding="async" fetchpriority="high" />
+        <img
+          src="/images/image 2.png"
+          alt="Portrait of Sophia"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </div>

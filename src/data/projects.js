@@ -18,7 +18,8 @@ export const projects = [
     slug: "llm-intuitive-interfaces",
     title: "LLM Intuitive Interfaces",
     date: "04/2025",
-    description: "Exploring intuitive interfaces for large language model interactions.",
+    description:
+      "Exploring intuitive interfaces for large language model interactions.",
     ogImage: "/images/og/llm.jpg",
     comingSoon: true,
     links: {
@@ -29,7 +30,8 @@ export const projects = [
     slug: "buzz",
     title: "Bellingham Buzz",
     date: "02/2025",
-    description: "A WordPress app helping Bellingham locals discover nightlife based on mood, location, and time of day.",
+    description:
+      "A WordPress app helping Bellingham locals discover nightlife based on mood, location, and time of day.",
     ogImage: "/images/og/buzz.jpg",
     links: {
       site: "https://thebellinghambuzz.com",
@@ -40,7 +42,8 @@ export const projects = [
     slug: "portfolio",
     title: "My Portfolio",
     date: "03/2025",
-    description: "A modern portfolio showcasing my projects with Swiss-inspired design and motion elements.",
+    description:
+      "A modern portfolio showcasing my projects with Swiss-inspired design and motion elements.",
     ogImage: "/images/og/portfolio.jpg",
     links: { site: "https://sophiazhuk.com" },
   },
@@ -53,14 +56,16 @@ export const projects = [
     slug: "mitra",
     title: "Mitra",
     date: "05/2024",
-    description: "A mentorship platform for autistic and neurodiverse college students, built with accessibility and inclusion at its core.",
+    description:
+      "A mentorship platform for autistic and neurodiverse college students, built with accessibility and inclusion at its core.",
     ogImage: "/images/og/mitra.jpg",
   },
   {
     slug: "vrnw",
     title: "Virtual Realty NW",
     date: "02/2021",
-    description: "A professional real estate website featuring responsive design and custom photo galleries.",
+    description:
+      "A professional real estate website featuring responsive design and custom photo galleries.",
     ogImage: "/images/og/vrnw.jpg",
   },
 ];
