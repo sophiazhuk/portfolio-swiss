@@ -9,7 +9,7 @@ const ContactSection = () => (
         <p>Reach me at...</p>
         <span className={styles.email}>zhuksophia@gmail.com</span>
         <a
-          href="/images/Sophia_Zhuk_3-2025.pdf"
+          href="/images/Sophia_Zhuk_Resume_11-2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resume}

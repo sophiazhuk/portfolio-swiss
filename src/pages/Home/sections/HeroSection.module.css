@@ -15,6 +15,7 @@
 .subtext {
   display: flex;
   margin-top: 20px;
+  line-height: 110%;
 }
 .subtext p {
   font-size: 20px;

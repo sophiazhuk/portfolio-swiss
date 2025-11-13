@@ -1,10 +1,12 @@
 portfolio
-1. tracklines squished when window size change
-2. bubbles not perfect circles
-3. about page mobile not good
-4. update text content
-5. add blog
-7. add llm
+[x] update text content
+[x] update resume
+- tracklines squished when window size change
+- bubbles not perfect circles
+- about page mobile not good
+- add blog
+- make project pages template based
+- add llm
 
 
 llm description:

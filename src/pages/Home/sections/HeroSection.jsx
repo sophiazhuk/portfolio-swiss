@@ -9,8 +9,8 @@ const HeroSection = () => (
     </div>
     <div className={styles.subtext}>
       <p>
-        Hello, I'm Sophia, a computer science student at Western Washington
-        University focusing on UX design and engineering.
+        Hey, I'm Sophia, a computer science student at Western Washington
+        University focusing on UX/UI design and engineering.
       </p>
     </div>
   </div>
