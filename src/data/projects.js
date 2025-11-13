@@ -16,14 +16,13 @@
 export const projects = [
   {
     slug: "llm-intuitive-interfaces",
-    title: "LLM Intuitive Interfaces",
+    title: "AI Curator",
     date: "04/2025",
     description:
-      "Exploring intuitive interfaces for large language model interactions.",
+      "AI-powered platform for exploring and curating civil rights oral history interviews from the Library of Congress.",
     ogImage: "/images/og/llm.jpg",
-    comingSoon: true,
     links: {
-      /* add when ready */
+      repo: "https://github.com/dustinmichels/lc-video-app",
     },
   },
   {

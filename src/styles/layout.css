@@ -34,7 +34,6 @@ button.theme-toggle:focus {
 html {
   background-color: var(--color-bg);
   color: var(--color-text);
-  overflow-y: hidden;
 }
 
 .layout {

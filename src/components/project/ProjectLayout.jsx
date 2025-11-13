@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ProjectLayout.module.css";
+import "../../styles/project.css";
 
 /**
  * Generic layout shell for a project detail page.
@@ -26,7 +27,7 @@ const ProjectLayout = ({ title, children, onBack }) => {
       </div>
       <div className={styles.projectContent}>
         <div className={styles.projectLeft} />
-        <div className={styles.projectBody}>{children}</div>
+        <div className="project-body">{children}</div>
       </div>
     </div>
   );

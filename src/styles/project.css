@@ -1,0 +1,113 @@
+/* Project page content styles */
+.project-body {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-body p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-body h2 {
+  font-size: 32px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.project-body h3 {
+  font-size: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.project-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.project-body ul li {
+  margin-bottom: 2rem;
+}
+
+.project-body ul li h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-body a {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.project-body a:hover {
+  color: var(--color-cyan);
+}
+
+/* Image containers */
+.image-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.project-img {
+  flex: 1;
+  min-width: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.project-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Two column layout */
+.project-two-col {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.project-col-one,
+.project-col-two {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 824px) {
+  .project-body {
+    padding: 30px 20px;
+  }
+
+  .project-body h2 {
+    font-size: 28px;
+  }
+
+  .project-body h3 {
+    font-size: 20px;
+  }
+
+  .image-container {
+    flex-direction: column;
+  }
+
+  .project-img {
+    min-width: 100%;
+  }
+
+  .project-two-col {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

@@ -26,6 +26,7 @@
 .bubble {
   width: 75px;
   height: 75px;
+  padding: 0px;
   background-color: var(--bubble-color, var(--color-text));
   color: var(--color-bg);
   border-radius: 38px;
@@ -35,6 +36,7 @@
   font-size: 38px;
   font-weight: bold;
   position: relative;
+  flex-shrink: 0;
   transition: 0.8s ease-in-out;
   transition: width 0.4s ease-in-out;
   overflow: hidden;
