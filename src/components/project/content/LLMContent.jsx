@@ -3,9 +3,9 @@ import React from "react";
 const LLMContent = () => (
   <>
     <p>
-      This curator project is a React based web application powered
-      by gpt 4o API for analyzing, exploring, and creating playlists from civil
-      rights oral history interviews from the Library of Congress collection:
+      This curator project is a React based web application powered by gpt 4o
+      API for analyzing, exploring, and creating playlists from civil rights
+      oral history interviews from the Library of Congress collection:
       <br />
       <a
         href="https://www.loc.gov/collections/civil-rights-history-project"
@@ -13,8 +13,10 @@ const LLMContent = () => (
         rel="noopener noreferrer"
       >
         https://www.loc.gov/collections/civil-rights-history-project
-      </a> <br />
-      The goal is to use the API to create a more intuitive interface for navigating large data sets.
+      </a>{" "}
+      <br />
+      The goal is to use the API to create a more intuitive interface for
+      navigating large data sets.
     </p>
     <br />
     <p>
