@@ -1,0 +1,96 @@
+/* migrated to CSS Modules: LeftAside.module.css and RightAside.module.css */
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.red {
+  background-color: #d85140;
+  content: "1";
+}
+.grey {
+  background-color: #38935b;
+  content: "2";
+}
+.yellow {
+  background-color: #f6b90b;
+  content: "3";
+}
+.blue {
+  background-color: #3555b4;
+  content: "4";
+}
+.orange {
+  background-color: #b84218;
+}
+
+.bubble-tab {
+  width: 1.3rem;
+  height: calc(100vh - 106px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2rem;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  transition: 100ms ease-in-out;
+}
+.bubble-tab-bottom {
+  height: 1.3rem;
+  width: 100%;
+  background-color: #d85140;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2rem;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  transition: 100ms ease-in-out;
+}
+
+.a1 {
+  height: 75vh;
+}
+.a2 {
+  height: 65vh;
+}
+.b1 {
+  width: 75vh;
+}
+.b2 {
+  width: 65vh;
+}
+
+.red {
+  background-color: var(--color-red);
+  color: var(--color-bg);
+}
+.blue {
+  background-color: var(--color-cyan);
+  color: var(--color-bg);
+}
+.grey {
+  background-color: var(--color-green);
+  color: var(--color-bg);
+}
+.yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-bg);
+}
+.default {
+  background-color: #ccc;
+  color: var(--color-text);
+}
+
+.bubble-tab span {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 824px) {
+}

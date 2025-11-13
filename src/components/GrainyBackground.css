@@ -1,0 +1,10 @@
+.grainy-background {
+  position: absolute;
+  mix-blend-mode: multiply;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b6223a;
+  filter: url(#noiseFilter);
+  pointer-events: none;
+  z-index: 999;
+}

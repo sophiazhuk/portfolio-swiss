@@ -1,0 +1,12 @@
+.footer {
+  background: none;
+  height: 15vh;
+  color: var(--color-text);
+  text-align: center;
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+}

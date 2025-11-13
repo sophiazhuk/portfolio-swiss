@@ -1,0 +1,281 @@
+.main-content {
+  padding: 20px 0px;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* migrated to CSS Modules: two-column, col-one, col-two */
+
+h1.sectionTitle {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.title {
+  border-bottom: 2px solid var(--color-text);
+  color: var(--color-text);
+}
+
+.sophia {
+  margin-top: 10px;
+  border-top: 2px solid var(--color-text);
+  padding: 10px;
+  text-align: right;
+}
+
+#hello {
+  font-size: 3rem;
+}
+
+@keyframes color-cycle {
+  0% {
+    color: #d85140;
+  }
+
+  25% {
+    color: #3555b4;
+  }
+
+  50% {
+    color: #38935b;
+  }
+
+  75% {
+    color: #f6b90b;
+  }
+
+  100% {
+    color: #d85140;
+  }
+}
+
+/* migrated to CSS Modules: hero, rainbow, subtext */
+/* migrated to CSS Modules: about-section, portrait */
+
+.animated-title > div div span {
+  display: block;
+}
+
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid;
+  top: 0;
+}
+
+.animated-title > div.text-top div {
+  animation: showTopText 0.5s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.25s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+div.text-bottom {
+  /* animation: color-cycle 4s infinite ease-in-out; */
+  font-weight: bold;
+}
+.scrollbar {
+  height: 100%;
+  overflow: auto;
+}
+/*       ScrollBar 1        */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #00000000;
+  border: 1px solid var(--color-text);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--color-text);
+}
+/* about */
+.about-section {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-bottom: 80px;
+  padding-right: 20px;
+}
+.portrait {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.portrait img {
+  height: 350px;
+  width: auto;
+}
+@media screen and (max-width: 1200px) {
+  .portrait img {
+    width: 250px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 824px) {
+  .about-section {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    padding-right: 10px;
+  }
+
+  .portrait {
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+  }
+  .portrait img {
+    width: min(400px, 90vw);
+    height: auto;
+    margin: 0 auto;
+  }
+}
+/* keep paragraph sizing as needed; components handle their own sizes */
+/* project */
+/* migrated to CSS Modules: project table styles */
+
+/* Project detail page styles (kept intact) */
+.project-page h3 {
+  color: var(--color-yellow);
+}
+.project-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+  background-color: #29536d;
+  color: #dcd6c8;
+}
+.project-header {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+}
+.project-header h1 {
+  font-size: 48px;
+  margin: auto 40px;
+}
+.project-header-left {
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+  padding-top: 20px;
+}
+.project-content {
+  background-color: #29536d;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+
+  display: flex;
+  flex-direction: row;
+}
+/* migrated to CSS Modules: project table */
+
+/* Back button (restored from accidental removal) */
+.back-button {
+  color: #dcd6c8;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.back-button::after {
+  content: "Back";
+}
+.back-button:hover,
+.back-button:active,
+.back-button:focus {
+  border: none;
+  text-decoration: none;
+}
+.project-two-col {
+  display: flex;
+  flex-direction: row;
+}
+.project-col-one {
+  margin-right: 50px;
+  width: 50%;
+}
+.project-col-two {
+  width: 50%;
+}
+.big-width {
+  width: 80% !important;
+  height: auto !important;
+}
+@media screen and (max-width: 1224px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-col-one {
+    margin-right: 0;
+    width: 100%;
+  }
+  .project-col-two {
+    width: 100%;
+  }
+  .project-two-col {
+    flex-direction: column;
+  }
+}
+/* Remove duplicated legacy project table block (now standardized above) */
+
+/* contact */
+/* migrated to CSS Modules: contact, email, resume */
+@media screen and (max-width: 824px) {
+  h1.sectionTitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  /* migrated responsive rules to modules */
+  .nav-header.open {
+    height: 100vh;
+  }
+  .hamburger-menu {
+    padding: 0;
+  }
+  .project-left {
+    display: none;
+  }
+
+  .project-body {
+    width: 90%;
+    padding-right: 0;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  /* project header responsive rules moved to module */
+}

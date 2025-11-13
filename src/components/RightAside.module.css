@@ -1,0 +1,10 @@
+.aside {
+  background: none;
+  padding: 20px;
+  font-size: 18px;
+}
+.right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

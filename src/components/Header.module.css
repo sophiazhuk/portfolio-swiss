@@ -1,0 +1,132 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  text-align: left;
+  padding: 40px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* Ensure header is above track lines and main content for clickability */
+  z-index: 2;
+}
+.headerTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navHeader ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  list-style: none;
+}
+.bubble {
+  width: 75px;
+  height: 75px;
+  background-color: var(--bubble-color, var(--color-text));
+  color: var(--color-bg);
+  border-radius: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: bold;
+  position: relative;
+  transition: 0.8s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+.bubble:active {
+  transform: scale(0.95);
+}
+/* Maintain original color on hover while only expanding */
+.bubble:hover {
+  width: 200px;
+  cursor: pointer;
+  background-color: var(--bubble-color);
+  color: var(--color-bg);
+}
+.bubble:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-text);
+}
+.bubbleText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap;
+}
+.bubbleText::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+.bubble:hover .bubbleText::after {
+  content: attr(data-hover);
+  opacity: 1;
+}
+.selected {
+  width: 200px;
+}
+.selected .bubbleText::after {
+  content: attr(data-hover);
+  opacity: 1;
+}
+.red {
+  --bubble-color: var(--color-red);
+}
+.cyan {
+  --bubble-color: var(--color-cyan);
+}
+.green {
+  --bubble-color: var(--color-green);
+}
+.yellow {
+  --bubble-color: var(--color-yellow);
+}
+@media screen and (max-width: 768px) {
+  .bubble {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+  }
+  .bubble:hover .bubbleText::after {
+    display: none;
+  }
+  .selected {
+    width: 160px;
+  }
+  .bubble:hover {
+    width: 125px;
+  }
+  .selected .bubbleText::after {
+    content: attr(data-hover);
+    opacity: 1;
+  }
+  .header {
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-bg);
+  }
+  .navHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .navHeader ul {
+    flex-direction: row;
+    padding: 0;
+  }
+}

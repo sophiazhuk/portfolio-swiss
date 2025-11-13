@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Variables moved to styles/tokens.css */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+  z-index: 999;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem 0.5rem;
+  background: var(--color-bg);
+  border: 2px solid var(--color-text);
+  border-radius: 1.5rem;
+  color: var(--color-text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.theme-toggle:hover,
+button.theme-toggle:focus {
+  border-color: var(--color-text);
+  outline: none;
+}
+.theme-toggle:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-y: hidden;
+}
+
+.layout {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Alte Haas Grotesk", sans-serif;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 8fr 0fr;
+  flex-grow: 1;
+  width: 100%;
+  /* Make background transparent so the TrackLines beneath are visible */
+  background: transparent;
+  position: relative;
+  z-index: 1; /* sit above the track lines */
+  color: var(--color-text);
+}
+
+/* svg track */
+.l-shape {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Place above the page background but below content */
+  z-index: 0;
+  pointer-events: none;
+  min-height: 650px;
+  max-height: 880px;
+}
+.l-shape svg {
+  position: absolute;
+  top: -240px;
+  left: -120px;
+  width: auto;
+  min-width: 100vw;
+  height: 100%;
+  transform: scale(1.5);
+  transform-origin: top left;
+}
+
+#cPath {
+  stroke: var(--active-line-color, #ff0000);
+  stroke-width: 3.2;
+  fill: none;
+  stroke-dasharray: 250 250;
+  stroke-dashoffset: 157;
+  transition: stroke 1s;
+  filter: drop-shadow(0px 0px 0.05px var(--active-line-color));
+}
+#bPath {
+  stroke: var(--active-line-color, #ff0000);
+  stroke-width: 3.2;
+  fill: none;
+  stroke-dasharray: 250 250;
+  stroke-dashoffset: 157;
+  transition: stroke 1s;
+  filter: drop-shadow(0px 0px 0.05px var(--active-line-color));
+}
+.l-line {
+  position: absolute !important;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-bottom-left-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.l-line::after {
+  content: "";
+  position: absolute !important;
+  top: -30px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid var(--active-line-color);
+  border-bottom: 20px solid transparent;
+  border-bottom-left-radius: 100px;
+  animation: trace-border 1s ease-in-out forwards;
+  z-index: 2;
+}
+
+@keyframes trace-border {
+  0% {
+    height: 0;
+    width: 0;
+    border-bottom-color: transparent;
+  }
+  50% {
+    height: 100%;
+    width: 0;
+    border-bottom-color: transparent;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+    border-bottom-color: var(--active-line-color);
+  }
+}
+
+.layout[data-active-section="sophia"] {
+  --active-line-color: var(--color-red);
+}
+
+.layout[data-active-section="about"] {
+  --active-line-color: var(--color-cyan);
+}
+
+.layout[data-active-section="projects"] {
+  --active-line-color: var(--color-green);
+}
+
+.layout[data-active-section="contact"] {
+  --active-line-color: var(--color-yellow);
+}
+
+@media screen and (max-width: 724px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 824px) {
+  .theme-toggle {
+    bottom: 100px;
+    right: 45px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    display: none;
+  }
+  .hero .name {
+    font-size: 72px;
+  }
+  h1 {
+    font-size: 72px;
+  }
+  .two-column {
+    flex-direction: column;
+  }
+  .col-one {
+    width: auto;
+  }
+  .col-two {
+    width: auto;
+  }
+  .l-shape {
+    position: absolute;
+    top: 450px;
+    left: 400px;
+    transform: rotate(90deg);
+  }
+  .l-shape svg {
+    min-height: 700px;
+  }
+  /* #cPath {
+        transition: stroke 12s;
+      }
+      #bPath {
+        transition: stroke 12s;
+      } */
+}
+@media screen and (max-width: 768px) {
+  .header {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    display: none;
+  }
+}

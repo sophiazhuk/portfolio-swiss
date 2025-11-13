@@ -1,0 +1,58 @@
+.twoColumn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 40px;
+}
+.colOne {
+  width: 60%;
+}
+.colTwo {
+  width: 40%;
+}
+.aboutSection {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-bottom: 80px;
+  padding-right: 20px;
+}
+.portrait {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+.portrait img {
+  height: 350px;
+  width: auto;
+}
+@media screen and (max-width: 1200px) {
+  .portrait img {
+    width: 250px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 824px) {
+  .twoColumn {
+    margin: 0 40px;
+    width: auto;
+  }
+  .aboutSection {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    padding-right: 10px;
+  }
+  .portrait {
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+  }
+  .portrait img {
+    width: min(400px, 90vw);
+    height: auto;
+    margin: 0 auto;
+  }
+}

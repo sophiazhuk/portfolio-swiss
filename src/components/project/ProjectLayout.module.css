@@ -1,0 +1,74 @@
+.projectPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+  background-color: #29536d;
+  color: #dcd6c8;
+}
+.projectHeader {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+}
+.projectTitle {
+  font-size: 48px;
+  margin: auto 40px;
+}
+.projectHeaderLeft {
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+  padding-top: 20px;
+}
+.projectContent {
+  background-color: #29536d;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+  display: flex;
+  flex-direction: row;
+}
+.projectBody {
+  width: 100%;
+}
+.back-button {
+  color: #dcd6c8;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.back-button::after {
+  content: "Back";
+}
+.back-button:hover,
+.back-button:active,
+.back-button:focus {
+  border: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 824px) {
+  .projectTitle {
+    font-size: 40px;
+    margin: auto 40px;
+    padding: 10px 0;
+  }
+  .projectHeaderLeft {
+    min-width: 70px;
+  }
+  .back-button {
+    padding: 0;
+  }
+  .back-button::after {
+    content: "";
+  }
+}

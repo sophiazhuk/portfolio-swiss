@@ -1,0 +1,53 @@
+.twoColumn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 40px;
+}
+.colOne {
+  width: 60%;
+}
+.colTwo {
+  width: 40%;
+}
+.projectTable {
+  width: 100%;
+  font-size: 38px;
+  border-top: 2px solid var(--color-text);
+  border-collapse: collapse;
+}
+.projectTable tr {
+  border-bottom: 2px solid var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    margin-left 300ms ease;
+  outline: none;
+}
+.projectTable tr:hover {
+  position: relative;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  margin-left: 30px;
+}
+.projectTable tr:focus-visible {
+  position: relative;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  margin-left: 30px;
+  box-shadow: 0 0 0 3px var(--color-yellow) inset;
+}
+.projectTable td {
+  padding: 2px 4px;
+}
+.comingSoon {
+  color: rgb(82, 82, 82);
+  cursor: default;
+}
+@media screen and (max-width: 824px) {
+  .projectTable {
+    font-size: 24px;
+  }
+}

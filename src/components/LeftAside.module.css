@@ -1,0 +1,12 @@
+.aside {
+  background: none;
+  padding: 20px;
+  font-size: 18px;
+}
+.left {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  justify-content: flex-end;
+  min-width: 180px;
+}

@@ -1,0 +1,47 @@
+.hero {
+  height: 100%;
+  line-height: 95%;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.name {
+  font-size: 120px;
+  line-height: 90%;
+  font-weight: bold;
+}
+.subtext {
+  display: flex;
+  margin-top: 20px;
+}
+.subtext p {
+  font-size: 20px;
+  width: 400px;
+}
+.rainbow {
+  animation: color-cycle 4s infinite ease-in-out;
+}
+@keyframes color-cycle {
+  0% {
+    color: #d85140;
+  }
+  25% {
+    color: #3555b4;
+  }
+  50% {
+    color: #38935b;
+  }
+  75% {
+    color: #f6b90b;
+  }
+  100% {
+    color: #d85140;
+  }
+}
+@media screen and (max-width: 824px) {
+  .name {
+    font-size: 72px;
+  }
+}
