@@ -110,7 +110,7 @@ div.text-bottom {
 .about-section {
   max-height: 60vh;
   overflow-y: auto;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   padding-right: 20px;
 }
 .portrait {
@@ -133,7 +133,7 @@ div.text-bottom {
   .about-section {
     max-height: 70vh;
     overflow-y: auto;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
     padding-right: 10px;
   }
 

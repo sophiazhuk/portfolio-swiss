@@ -12,6 +12,9 @@
   display: flex;
   flex-direction: column;
 }
+.contact p {
+  margin: 0;
+}
 .email {
   font-size: clamp(24px, 4vw, 40px);
 }
