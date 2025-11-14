@@ -195,6 +195,11 @@ html {
   .col-two {
     width: auto;
   }
+  /* Temporarily hide SVG track lines on mobile - TODO: optimize positioning later */
+  .l-shape {
+    display: none;
+  }
+  /* Original mobile positioning - kept for future reference
   .l-shape {
     position: absolute;
     top: 450px;
@@ -204,6 +209,7 @@ html {
   .l-shape svg {
     min-height: 700px;
   }
+  */
   /* #cPath {
         transition: stroke 12s;
       }
