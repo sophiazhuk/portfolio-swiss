@@ -12,7 +12,7 @@
 }
 .projectTable {
   width: 100%;
-  font-size: 38px;
+  font-size: clamp(20px, 3.5vw, 38px);
   border-top: 2px solid var(--color-text);
   border-collapse: collapse;
 }
@@ -46,11 +46,6 @@
 .comingSoon {
   color: rgb(82, 82, 82);
   cursor: default;
-}
-@media screen and (max-width: 1024px) {
-  .projectTable {
-    font-size: 24px;
-  }
 }
 @media screen and (max-width: 768px) {
   .twoColumn {

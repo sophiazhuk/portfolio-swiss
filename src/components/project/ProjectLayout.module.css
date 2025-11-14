@@ -16,7 +16,7 @@
   flex-direction: row;
 }
 .projectTitle {
-  font-size: 48px;
+  font-size: clamp(28px, 5vw, 48px);
   margin: auto 40px;
 }
 .projectHeaderLeft {
@@ -59,11 +59,6 @@
   text-decoration: none;
 }
 @media screen and (max-width: 1024px) {
-  .projectTitle {
-    font-size: 40px;
-    margin: auto 40px;
-    padding: 10px 0;
-  }
   .projectHeaderLeft {
     min-width: 70px;
   }
@@ -82,7 +77,6 @@
     min-width: 50px;
   }
   .projectTitle {
-    font-size: 32px;
     margin: auto 20px;
   }
 }
