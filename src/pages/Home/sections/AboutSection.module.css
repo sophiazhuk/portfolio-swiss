@@ -33,8 +33,13 @@
 }
 @media screen and (max-width: 768px ) {
   .twoColumn {
-    margin: 0 40px;
+    flex-direction: column;
+    margin: 0 20px;
     width: auto;
+  }
+  .colOne,
+  .colTwo {
+    width: 100%;
   }
   .aboutSection {
     max-height: 70vh;

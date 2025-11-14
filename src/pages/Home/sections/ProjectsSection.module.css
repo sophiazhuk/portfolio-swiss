@@ -52,3 +52,21 @@
     font-size: 24px;
   }
 }
+@media screen and (max-width: 768px) {
+  .twoColumn {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .colOne,
+  .colTwo {
+    width: 90%;
+  }
+  .projectTable {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+  .projectTable tr:hover,
+  .projectTable tr:focus-visible {
+    margin-left: 15px;
+  }
+}

@@ -74,3 +74,15 @@
     content: "";
   }
 }
+@media screen and (max-width: 768px) {
+  .projectLeft {
+    display: none;
+  }
+  .projectHeaderLeft {
+    min-width: 50px;
+  }
+  .projectTitle {
+    font-size: 32px;
+    margin: auto 20px;
+  }
+}

@@ -110,4 +110,9 @@
     flex-direction: column;
     gap: 1.5rem;
   }
+
+  .project-col-one,
+  .project-col-two {
+    width: 100%;
+  }
 }
