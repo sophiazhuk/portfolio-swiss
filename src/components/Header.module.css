@@ -94,7 +94,7 @@
 .yellow {
   --bubble-color: var(--color-yellow);
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .bubble {
     width: 65px;
     height: 65px;

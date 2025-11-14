@@ -171,7 +171,7 @@ html {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .theme-toggle {
     bottom: 100px;
     right: 45px;

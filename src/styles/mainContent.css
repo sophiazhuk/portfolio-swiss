@@ -129,7 +129,7 @@ div.text-bottom {
     height: auto;
   }
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .about-section {
     max-height: 70vh;
     overflow-y: auto;

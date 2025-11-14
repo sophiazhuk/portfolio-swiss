@@ -31,7 +31,7 @@
     height: auto;
   }
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .twoColumn {
     flex-direction: column;
     margin: 0 20px;
