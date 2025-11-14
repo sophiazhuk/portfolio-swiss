@@ -13,7 +13,25 @@
 
 /** @type {BlogPost[]} */
 export const blogPosts = [
-  // Example entries - remove these and add your own
+  {
+    slug: "building-this-blog",
+    title: "Building a Blog System for My Portfolio",
+    date: "2025-11-14",
+    tags: ["project", "ideas"],
+    excerpt:
+      "How I built a custom blog system with markdown support, tag filtering, and a blueprint aesthetic that matches my portfolio design.",
+    readTime: "6 min",
+  },
+  {
+    slug: "example-post",
+    title: "Welcome to My Blog",
+    date: "2025-11-14",
+    tags: ["ideas"],
+    excerpt:
+      "This is an example blog post to demonstrate how the blog system works. Learn about markdown formatting and blog features.",
+    readTime: "3 min",
+  },
+  // Add your own blog posts below
   // {
   //   slug: "my-first-post",
   //   title: "My First Blog Post",

@@ -25,6 +25,38 @@
   height: auto;
   width: min(280px, 80vw);
 }
+.blogButton {
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--color-bg);
+  height: 50px;
+  width: 160px;
+  border-radius: 38px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--color-yellow);
+  background-color: var(--color-yellow);
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+.blogButton:hover {
+  color: var(--color-yellow);
+  background-color: transparent;
+}
+.blogButton:hover svg {
+  stroke: var(--color-yellow);
+}
+.blogButton svg {
+  stroke: var(--color-bg);
+  transition: 300ms ease-in-out;
+}
+.blogButton:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
 @media screen and (max-width: 1200px) {
   .portrait img {
     width: 250px;
