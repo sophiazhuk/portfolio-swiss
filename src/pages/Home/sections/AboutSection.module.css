@@ -31,7 +31,7 @@
     height: auto;
   }
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 768px ) {
   .twoColumn {
     margin: 0 40px;
     width: auto;

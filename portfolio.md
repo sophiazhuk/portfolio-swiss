@@ -1,13 +1,12 @@
 portfolio
 [x] update text content
 [x] update resume
-
-- tracklines squished when window size change
-- bubbles not perfect circles
-- about page mobile not good
-- add blog
-- make project pages template based
-- add llm
+[] tracklines squished when window size change
+[x] bubbles not perfect circles
+[] mobile responsiveness
+[] add blog
+[] make project pages template based
+[x] add llm
 
 llm description:
 this is an ai-powered clip curator. we used openai's api and vector search methods in order to parse through a large database of civil rights interviews by the library of congress. the interviews were extracted into clips by extracting the transcript, using an ai powered script to divide the 1hr+ longs interviews into clips of stories. extracting and appending keywords to the clips, then placing them into a collection of clips.

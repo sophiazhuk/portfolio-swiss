@@ -163,12 +163,12 @@ html {
   --active-line-color: var(--color-yellow);
 }
 
-@media screen and (max-width: 724px) {
+@media screen and (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 768px ) {
   .theme-toggle {
     bottom: 100px;
     right: 45px;
@@ -211,7 +211,7 @@ html {
         transition: stroke 12s;
       } */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .header {
     gap: 10px;
     flex-direction: column;

@@ -129,7 +129,7 @@ div.text-bottom {
     height: auto;
   }
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 768px ) {
   .about-section {
     max-height: 70vh;
     overflow-y: auto;
@@ -233,7 +233,7 @@ div.text-bottom {
   width: 80% !important;
   height: auto !important;
 }
-@media screen and (max-width: 1224px) {
+@media screen and (max-width: 1200px) {
   .image-container {
     flex-direction: column;
     align-items: center;
@@ -253,7 +253,7 @@ div.text-bottom {
 
 /* contact */
 /* migrated to CSS Modules: contact, email, resume */
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 1024px) {
   h1.sectionTitle {
     font-size: 60px;
     margin-bottom: 20px;

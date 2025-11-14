@@ -42,7 +42,7 @@
   stroke: var(--color-bg);
   transition: 300ms ease-in-out;
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 1024px) {
   .twoColumn h1.sectionTitle {
     font-size: 60px;
     margin-bottom: 20px;

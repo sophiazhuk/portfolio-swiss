@@ -58,7 +58,7 @@
   border: none;
   text-decoration: none;
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 1024px) {
   .projectTitle {
     font-size: 40px;
     margin: auto 40px;
