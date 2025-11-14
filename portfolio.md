@@ -1,9 +1,9 @@
 portfolio
 [x] update text content
 [x] update resume
-[] tracklines squished when window size change
+[x] tracklines squished when window size change
 [x] bubbles not perfect circles
-[] mobile responsiveness
+[x] mobile responsiveness
 [] add blog
 [] make project pages template based
 [x] add llm

@@ -1,0 +1,26 @@
+.blogGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #b8b8b8;
+}
+
+.emptyState p {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .blogGrid {
+    gap: 1rem;
+  }
+
+  .emptyState {
+    padding: 3rem 1rem;
+  }
+}

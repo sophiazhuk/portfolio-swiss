@@ -1,0 +1,156 @@
+/* Blog page global styles - blueprint aesthetic matching project pages */
+
+.blog-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+  background-color: #29536d;
+  color: #dcd6c8;
+}
+
+.blog-header {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-title {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: auto 40px;
+}
+
+.blog-header-left {
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+  padding-top: 20px;
+}
+
+.blog-content {
+  background-color: #29536d;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #ffffff11 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff11 1px, transparent 1px);
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.blog-left {
+  min-width: 120px;
+  border-right: 1px solid #fff;
+}
+
+.blog-body {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.blog-body p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-body h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.blog-body h3 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  color: var(--color-yellow);
+}
+
+.blog-body a {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.blog-body a:hover {
+  color: var(--color-cyan);
+}
+
+.blog-body ul,
+.blog-body ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.blog-body li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-body code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+.blog-body pre {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-body pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.blog-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.blog-body blockquote {
+  border-left: 4px solid var(--color-yellow);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #b8b8b8;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .blog-header-left {
+    min-width: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-left {
+    display: none;
+  }
+  .blog-header-left {
+    min-width: 50px;
+  }
+  .blog-title {
+    margin: auto 20px;
+  }
+  .blog-body {
+    padding: 30px 20px;
+  }
+}
