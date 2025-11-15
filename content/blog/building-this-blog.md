@@ -17,8 +17,6 @@ Now, on my third iteration of my portfolio website, I wanted to add a blog!
 
 ## My goal:
 
-My goals:
-
 - blog entries with markdown
 - tag based filtering
 - fully responsive across devices

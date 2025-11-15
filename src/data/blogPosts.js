@@ -15,15 +15,12 @@
 /** @type {BlogPost[]} */
 export const blogPosts = [
   {
-    "slug": "building-this-blog",
-    "title": "Building a Blog",
-    "date": "2025-11-14",
-    "tags": [
-      "project",
-      "ideas"
-    ],
-    "excerpt": "How I built a custom blog system with markdown support."
-  }
+    slug: "building-this-blog",
+    title: "Building a Blog",
+    date: "2025-11-14",
+    tags: ["project", "ideas"],
+    excerpt: "How I built a custom blog system with markdown support.",
+  },
 ];
 
 /**
@@ -32,8 +29,8 @@ export const blogPosts = [
  */
 export const getAllTags = () => {
   const tagSet = new Set();
-  blogPosts.forEach(post => {
-    post.tags.forEach(tag => tagSet.add(tag));
+  blogPosts.forEach((post) => {
+    post.tags.forEach((tag) => tagSet.add(tag));
   });
   return Array.from(tagSet).sort();
 };
@@ -45,7 +42,7 @@ export const getAllTags = () => {
  */
 export const getPostsByTag = (tag) => {
   if (!tag || tag === "all") return blogPosts;
-  return blogPosts.filter(post => post.tags.includes(tag));
+  return blogPosts.filter((post) => post.tags.includes(tag));
 };
 
 /**
@@ -54,5 +51,5 @@ export const getPostsByTag = (tag) => {
  * @returns {BlogPost | undefined} Blog post or undefined if not found
  */
 export const getPostBySlug = (slug) => {
-  return blogPosts.find(post => post.slug === slug);
+  return blogPosts.find((post) => post.slug === slug);
 };
