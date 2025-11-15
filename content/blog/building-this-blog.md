@@ -1,4 +1,13 @@
-# Building a Blog System for My Portfolio
+---
+slug: building-this-blog
+title: Building a Blog
+date: 2025-11-14
+tags: [project, ideas]
+excerpt: How I built a custom blog system with markdown support.
+readTime: 6 min
+---
+
+# Building a Blog
 
 The reason why I got into web dev in highschool was because I wanted to make a blog for myself. I wanted to make one to talk about music, projects, photography, and all my interests at the time. 
 
@@ -24,15 +33,22 @@ Rather than dealing with CMS, I opted for markdown files. This means I can write
 
 ### Dynamic Content Loading
 
-Blog posts are loaded dynamically using React Router and the Fetch API. Each markdown file lives in `/content/blog/`, and metadata is managed in a central `blogPosts.js` file:
+The posts are loaded using React Router and the Fetch API. Each markdown file lives in `/content/blog/` with frontmatter metadata at the top:
 
-```javascript
-{
-  slug: "building-this-blog",
-  title: "Building a Blog System for My Portfolio",
-  date: "2025-11-14",
-  tags: ["project", "ideas"],
-  excerpt: "How I built a custom blog system...",
-  readTime: "5 min"
-}
+```markdown
+---
+slug: my-awesome-post
+title: My Awesome Post
+date: 2025-11-14
+tags: [project, ideas]
+excerpt: A brief summary of what this post is about. Keep it concise and engaging!
+---
+
+# Post Title
+
+Content starts here...
 ```
+
+A build script (`scripts/build-blog.js`) scans all markdown files, extracts the frontmatter using gray-matter, and generates `src/data/blogPosts.js`. All metadata lives directly in the markdown file.
+
+The build script runs before every deployment.

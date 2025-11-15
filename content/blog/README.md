@@ -10,7 +10,17 @@ Create a new `.md` file in this directory with your post slug as the filename.
 
 **Example:** `my-awesome-post.md`
 
+Add **frontmatter** at the top with all required metadata:
+
 ```markdown
+---
+slug: my-awesome-post
+title: My Awesome Post
+date: 2025-11-14
+tags: [project, ideas]
+excerpt: A brief summary of what this post is about. Keep it concise and engaging!
+---
+
 # Your Post Title
 
 Your introduction paragraph goes here...
@@ -34,24 +44,37 @@ const example = "Hello world";
 ![Image alt text](/images/blog/your-image.jpg)
 ```
 
-### Step 2: Add Metadata
+### Step 2: Build the Blog Index
 
-Open `/src/data/blogPosts.js` and add your post metadata to the `blogPosts` array:
+After creating your markdown file with frontmatter, run:
 
-```javascript
-{
-  slug: "my-awesome-post",           // Must match your .md filename
-  title: "My Awesome Post",          // Display title
-  date: "2025-11-14",                // ISO format (YYYY-MM-DD)
-  tags: ["project", "ideas"],        // Array of tags for filtering
-  excerpt: "A brief summary...",     // Preview text for blog cards
-  readTime: "5 min"                  // Estimated reading time
-}
+```bash
+npm run blog:build
 ```
 
-### Step 3: Add Images (Optional)
+This scans all markdown files, extracts the frontmatter, and generates `src/data/blogPosts.js`.
 
-If you want to include images:
+### Step 3: Preview Locally
+
+Start the dev server to see your post:
+
+```bash
+npm run dev
+```
+
+Navigate to `/blog` to see your post listed, or `/blog/my-awesome-post` to view it directly.
+
+## Frontmatter Fields
+
+All fields are **required** in the frontmatter:
+
+- **slug**: URL-friendly identifier (must match filename, used in `/blog/{slug}`)
+- **title**: Display title for the post
+- **date**: Publication date in YYYY-MM-DD format
+- **tags**: Array of tags for filtering (e.g., `[project, music, ideas]`)
+- **excerpt**: Brief preview text shown on blog cards (keep under 200 characters)
+
+### Add Images (Optional)
 
 1. Place images in `/public/images/blog/`
 2. Reference them in markdown: `![Alt text](/images/blog/your-image.jpg)`
@@ -79,7 +102,15 @@ Use any tags you want! Common ones:
 
 ## Post Visibility
 
-Posts are automatically sorted by date (newest first) on the blog home page. The blog system will automatically:
+Posts are automatically sorted by date (newest first) on the blog home page. 
+
+**Deployment Note**: The build script runs automatically before deployment:
+
+```bash
+npm run build  # Runs blog:build first, then vite build
+```
+
+This ensures `blogPosts.js` is always up-to-date with your markdown files.
 
 - Display your post on `/blog` home page
 - Create a dedicated page at `/blog/your-slug`
@@ -92,4 +123,3 @@ Posts are automatically sorted by date (newest first) on the blog home page. The
 - **Write good excerpts**: They appear on the blog home page
 - **Use descriptive titles**: They help with SEO and navigation
 - **Tag thoughtfully**: Tags help readers find related content
-- **Estimate read time**: Use ~200 words per minute as a guideline

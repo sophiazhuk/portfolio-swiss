@@ -28,7 +28,11 @@ const BlogPost = () => {
           throw new Error("Blog post not found");
         }
         const text = await response.text();
-        setContent(text);
+        
+        // Strip frontmatter manually (simple approach for browser)
+        const frontmatterRegex = /^---\s*\n[\s\S]*?\n---\s*\n/;
+        const markdownContent = text.replace(frontmatterRegex, '');
+        setContent(markdownContent);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -85,7 +89,6 @@ const BlogPost = () => {
       <BlogLayout title={post.title}>
         <div className={styles.postMeta}>
           <span className={styles.date}>{formatDate(post.date)}</span>
-          <span className={styles.readTime}>{post.readTime} read</span>
         </div>
         <div className={styles.tags}>
           {post.tags.map((tag) => (
