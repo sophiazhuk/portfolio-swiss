@@ -23,6 +23,15 @@ export const blogPosts = [
       "ideas"
     ],
     "excerpt": "How I built a custom blog system with markdown support."
+  },
+  {
+    "slug": "welcome",
+    "title": "Welcome to My Blog",
+    "date": "2025-11-14",
+    "tags": [
+      "ideas"
+    ],
+    "excerpt": "This is an example blog post to demonstrate how the blog system works. Learn about markdown formatting and blog features."
   }
 ];
 

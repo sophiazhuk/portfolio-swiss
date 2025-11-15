@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { IoArrowForward } from "react-icons/io5";
 import { projects } from "../../../data/projects";
 import styles from "./ProjectsSection.module.css";
 
@@ -34,6 +35,14 @@ const ProjectsSection = () => {
             ))}
           </tbody>
         </table>
+        {/* <a
+          href="/blog"
+          className={styles.blogButton}
+          aria-label="Visit my blog"
+        >
+          Blog
+          <IoArrowForward />
+        </a> */}
       </div>
       <div className={styles.colTwo} />
     </div>

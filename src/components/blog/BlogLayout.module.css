@@ -11,6 +11,7 @@
 
 .backButton:hover {
   transform: translateX(-4px);
+  background-color: unset;
 }
 
 .backButton:focus-visible {

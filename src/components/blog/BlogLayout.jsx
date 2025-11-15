@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { IoArrowBack } from "react-icons/io5";
 import styles from "./BlogLayout.module.css";
 import "../../styles/blog.css";
 
@@ -29,7 +30,7 @@ const BlogLayout = ({ title, children, onBack, showBackButton = true }) => {
               onClick={handleBack}
               aria-label="Back to Blog Home"
             >
-              ←
+              <IoArrowBack />
             </button>
           )}
         </div>

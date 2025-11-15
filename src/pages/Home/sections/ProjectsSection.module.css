@@ -47,6 +47,38 @@
   color: rgb(82, 82, 82);
   cursor: default;
 }
+.blogButton {
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--color-bg);
+  height: 50px;
+  width: 160px;
+  border-radius: 38px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid var(--color-yellow);
+  background-color: var(--color-yellow);
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+.blogButton:hover {
+  color: var(--color-yellow);
+  background-color: transparent;
+}
+.blogButton svg {
+  color: var(--color-bg);
+  transition: 300ms ease-in-out;
+}
+.blogButton:hover svg {
+  color: var(--color-yellow);
+}
+.blogButton:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
 @media screen and (max-width: 768px) {
   .twoColumn {
     flex-direction: column;
