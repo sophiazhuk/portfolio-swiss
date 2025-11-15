@@ -9,7 +9,7 @@ readTime: 6 min
 
 # Building a Blog
 
-The reason why I got into web dev in highschool was because I wanted to make a blog for myself. I wanted to make one to talk about music, projects, photography, and all my interests at the time. 
+The reason why I got into web dev in highschool was because I wanted to make a blog for myself. I wanted to make one to talk about music, projects, photography, and all my interests at the time.
 
 Being new to web development at the time, instead of watching and reading tutorials, I would end up reverse engineering ancient blogs that I liked. This lead to the unfortunate reality that my first website was a table based layout.
 
@@ -29,7 +29,6 @@ My goals:
 ### Markdown
 
 Rather than dealing with CMS, I opted for markdown files. This means I can write posts in my code editor, version control them, and deploy them alongside my code. Simple.
-
 
 ### Dynamic Content Loading
 

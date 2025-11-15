@@ -17,8 +17,8 @@ const AboutSection = () => {
           </p>
           <p>
             I have experience in Front-End work from my UX Engineering
-            internship at MCG Health, where I developed UI features and fixed
-            UI bugs for health care software.
+            internship at MCG Health, where I developed UI features and fixed UI
+            bugs for health care software.
           </p>
           <p>
             I have also gained experience with NEAT Lab, where I would build
@@ -37,7 +37,6 @@ const AboutSection = () => {
             fetchpriority="high"
           />
         </div>
-
       </div>
     </div>
   );

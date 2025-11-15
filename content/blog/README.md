@@ -27,7 +27,7 @@ Your introduction paragraph goes here...
 
 ## Section Heading
 
-Your content with **bold**, *italic*, and [links](https://example.com).
+Your content with **bold**, _italic_, and [links](https://example.com).
 
 ### Subsection
 
@@ -82,6 +82,7 @@ All fields are **required** in the frontmatter:
 ### Available Tags
 
 Use any tags you want! Common ones:
+
 - `project` - Work projects and case studies
 - `music` - Music-related posts
 - `ideas` - Thoughts and concepts
@@ -92,7 +93,7 @@ Use any tags you want! Common ones:
 ### Markdown Features Supported
 
 - Headings (h1-h6)
-- **Bold** and *italic* text
+- **Bold** and _italic_ text
 - [Links](https://example.com)
 - `Inline code` and code blocks
 - Lists (ordered and unordered)
@@ -102,7 +103,7 @@ Use any tags you want! Common ones:
 
 ## Post Visibility
 
-Posts are automatically sorted by date (newest first) on the blog home page. 
+Posts are automatically sorted by date (newest first) on the blog home page.
 
 **Deployment Note**: The build script runs automatically before deployment:
 

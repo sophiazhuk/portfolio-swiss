@@ -1,50 +1,55 @@
 /**
  * Blog Build Script
- * 
+ *
  * This script scans all markdown files in /content/blog/,
  * extracts frontmatter metadata, and generates src/data/blogPosts.js
- * 
+ *
  * Run before deploying: npm run blog:build
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import matter from 'gray-matter';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import matter from "gray-matter";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BLOG_DIR = path.join(__dirname, '../content/blog');
-const OUTPUT_FILE = path.join(__dirname, '../src/data/blogPosts.js');
+const BLOG_DIR = path.join(__dirname, "../content/blog");
+const OUTPUT_FILE = path.join(__dirname, "../src/data/blogPosts.js");
 
 /**
  * Read all markdown files and extract frontmatter
  */
 function generateBlogPosts() {
-  const files = fs.readdirSync(BLOG_DIR).filter(file => 
-    file.endsWith('.md') && file !== 'README.md'
-  );
+  const files = fs
+    .readdirSync(BLOG_DIR)
+    .filter((file) => file.endsWith(".md") && file !== "README.md");
 
-  const posts = files.map(filename => {
+  const posts = files.map((filename) => {
     const filePath = path.join(BLOG_DIR, filename);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent);
 
     // Validate required fields
-    const requiredFields = ['slug', 'title', 'date', 'tags', 'excerpt'];
-    const missingFields = requiredFields.filter(field => !data[field]);
-    
+    const requiredFields = ["slug", "title", "date", "tags", "excerpt"];
+    const missingFields = requiredFields.filter((field) => !data[field]);
+
     if (missingFields.length > 0) {
-      console.warn(`${filename} is missing fields: ${missingFields.join(', ')}`);
+      console.warn(
+        `${filename} is missing fields: ${missingFields.join(", ")}`,
+      );
     }
 
     return {
-      slug: data.slug || '',
-      title: data.title || '',
-      date: typeof data.date === 'string' ? data.date : data.date?.toISOString().split('T')[0] || '',
+      slug: data.slug || "",
+      title: data.title || "",
+      date:
+        typeof data.date === "string"
+          ? data.date
+          : data.date?.toISOString().split("T")[0] || "",
       tags: data.tags || [],
-      excerpt: data.excerpt || '',
+      excerpt: data.excerpt || "",
     };
   });
 
@@ -101,11 +106,11 @@ export const getPostBySlug = (slug) => {
 };
 `;
 
-  fs.writeFileSync(OUTPUT_FILE, output, 'utf-8');
-  
-  console.log('Blog posts generated successfully!');
+  fs.writeFileSync(OUTPUT_FILE, output, "utf-8");
+
+  console.log("Blog posts generated successfully!");
   console.log(`Found ${posts.length} blog post(s):`);
-  posts.forEach(post => {
+  posts.forEach((post) => {
     console.log(`   - ${post.title} (${post.slug})`);
   });
 }
@@ -114,6 +119,6 @@ export const getPostBySlug = (slug) => {
 try {
   generateBlogPosts();
 } catch (error) {
-  console.error('Error generating blog posts:', error);
+  console.error("Error generating blog posts:", error);
   process.exit(1);
 }

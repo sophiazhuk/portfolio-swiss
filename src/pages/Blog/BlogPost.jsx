@@ -28,10 +28,10 @@ const BlogPost = () => {
           throw new Error("Blog post not found");
         }
         const text = await response.text();
-        
+
         // Strip frontmatter manually (simple approach for browser)
         const frontmatterRegex = /^---\s*\n[\s\S]*?\n---\s*\n/;
-        const markdownContent = text.replace(frontmatterRegex, '');
+        const markdownContent = text.replace(frontmatterRegex, "");
         setContent(markdownContent);
       } catch (err) {
         setError(err.message);

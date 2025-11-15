@@ -61,11 +61,7 @@ const BlogHome = () => {
         ogImage="/images/og/home.jpg"
         path="/blog"
       />
-      <BlogLayout
-        title="Blog"
-        onBack={handleBackToHome}
-        showBackButton={true}
-      >
+      <BlogLayout title="Blog" onBack={handleBackToHome} showBackButton={true}>
         <BlogSearch
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}
